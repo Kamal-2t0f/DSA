@@ -10,11 +10,8 @@ public:
                 break;
             }
         }
-        if(idx==-1)
-        {
-            reverse(nums.begin(),nums.end());
-        }
-        else
+       
+       if(idx!=-1)
         {
            for(int i=nums.size()-1;i>idx;i--)
            {
@@ -24,8 +21,8 @@ public:
                 break;
             }
            }
-           reverse(nums.begin()+idx+1,nums.end());
         }
+        reverse(nums.begin()+idx+1,nums.end());
         for(int i=0;i<nums.size();i++) cout<<nums[i];
     }
 };
